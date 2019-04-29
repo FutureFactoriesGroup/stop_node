@@ -31,7 +31,7 @@ while(True):
 	if(inputString.contains("Stop")):
 		m = hashlib.sha256()
 		DataToSend = "0051035"
-		m.update(PathData.encode('utf-8'))
+		m.update(DataToSend.encode('utf-8'))
 		Checksum = m.hexdigest()
 		DataToSend = DataToSend + Checksum
 		pub.publish(DataToSend)
